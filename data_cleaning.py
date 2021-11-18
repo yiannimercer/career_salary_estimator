@@ -29,7 +29,7 @@ for filename in all_files:
 
 
 df = pd.concat(dfs, axis=0, ignore_index=True)
-
+df['simplified_job_title'].value_counts()
 # Basic Understanding of Data
 df.shape
 df.head()
@@ -83,5 +83,5 @@ df['age'] = df.Founded.apply(lambda x: x if x < 1 else 2021 - x)
 
 
 
-df.to_csv("cleaned_df.csv")
+df.to_csv("data_collection/data_files/cleaned_df.csv")
 
