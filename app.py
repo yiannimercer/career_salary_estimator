@@ -380,7 +380,7 @@ def main():
         result = str("${:.3f}".format(result))
         result = result.replace('.',',')
         st.success("Based off of the Random Forest Regression Model with Mean Absolute Error of ~ $16,400, and whose parameters were hypertuned using GridSearch CV, your estimated salary should be {}".format(result))
-        link = "#### For more information on this career, check out Glassdoor's Information [Page](https://www.glassdoor.com/Search/results.htm?keyword={})".format(simplified_job_title.replace(' ',''))
+        link = "#### For more information on this career, check out Glassdoor's Information [Page](https://www.glassdoor.com/Search/results.htm?keyword={})".format(simplified_job_title)
         st.markdown(link,unsafe_allow_html=True)
     
     st.write("Please feel free to reach out to me regarding any questions, comments, or concerns!")
