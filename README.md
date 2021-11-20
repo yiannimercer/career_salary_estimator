@@ -1,4 +1,4 @@
-![Banner](https://github.com/yiannimercer/career_salary_estimator/banner.jpeg)
+![Banner](https://github.com/yiannimercer/career_salary_estimator/blob/main/banner.jpeg)
 # Career Salary Estimator
 
 ## Overview
