@@ -1,4 +1,3 @@
-![Banner](https://github.com/yiannimercer/career_salary_estimator/blob/main/banner.jpeg)
 # Career Salary Estimator
 
 ## Overview
@@ -8,3 +7,5 @@
 * Performed feature engineering on various columns to enhance the information we captured from Glassdoor.  For instance, we computed our dependent variable, *Average Salary* from the *Minimum* and *Maximum Salary* columns, taking into account if our data records were per hour, or annually.   
 * Implemented exhaustive hyperparameter tuning of our Random Forest Regression model to arrive at the best performance, according to mean absolute error.  
 * Developed a web application utilizing [Streamlit](https://streamlit.io) to allow for users to input values for our independent variables.  The web app then utilizes the serialized Random Forest Regression model to make predicts on the user inputted data.
+
+## Demo of Web Application
