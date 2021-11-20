@@ -22,17 +22,17 @@ You can of course interact with the Web Application yourself [here](https://shar
 ## Data Collection
 After updating the web scraper that was previously developed to the most recent (Nov, 2021) HTML Code that Glassdoor is using, the following variables were collected for each job posting:
 
-* Job Title - Title of the Job Posting on Glassdoor (E.g., Data Scientist, Dental Hygienist)
-* Salary Estimate - The Glassdoor provided average salary estimate based on previous employees in the same company and/or position who have reported their earnings to the platform.  (E.g., Employer Provided Salary: $80K - $100K)
-* Job Description - A brief description of the job, responsibilities, and other need to know's that the company has chosen to share.
-* Company Rating - A float data type representing the company's average rating, on a scale from 1.0 to 5.0 (E.g., 3.7)
-* Company Name - The name of the company who is offering the job (E.g., Amazon.com Services LLC)
-* Location - The location of where the job is being offered (E.g., Sandy, TX)
-* Size - The size of the company as a whole. (E.g., 10000+ Employees)
-* Founded - The year the company was founded (E.g., 1994)
-* Type of Ownership - A string variable indicating if the company is public, private, school/university, government, etc. (E.g., Company - Public)
-* Industry - The industry the company is in (E.g., Internet)
-* Sector - The sector the company is in (E.g., Information Technology)
-* Revenue - The revenue the company earns each fiscal year (E.g., $10+ Billion)
+* *Job Title* - Title of the Job Posting on Glassdoor (E.g., Data Scientist, Dental Hygienist)
+* *Salary Estimate* - The Glassdoor provided average salary estimate based on previous employees in the same company and/or position who have reported their earnings to the platform.  (E.g., Employer Provided Salary: $80K - $100K)
+* *Job Description* - A brief description of the job, responsibilities, and other need to know's that the company has chosen to share.
+* *Company Rating* - A float data type representing the company's average rating, on a scale from 1.0 to 5.0 (E.g., 3.7)
+* *Company Name* - The name of the company who is offering the job (E.g., Amazon.com Services LLC)
+* *Location* - The location of where the job is being offered (E.g., Sandy, TX)
+* *Size* - The size of the company as a whole. (E.g., 10000+ Employees)
+* *Founded* - The year the company was founded (E.g., 1994)
+* *Type of Ownership* - A string variable indicating if the company is public, private, school/university, government, etc. (E.g., Company - Public)
+* *Industry* - The industry the company is in (E.g., Internet)
+* *Sector* - The sector the company is in (E.g., Information Technology)
+* *Revenue* - The revenue the company earns each fiscal year (E.g., $10+ Billion)
 
 Additionally, various features were engineered or appended to the data frame that we developed.  Below is a list of these features.
