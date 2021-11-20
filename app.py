@@ -89,7 +89,8 @@ def main():
       
     # display the front end aspect
     st.markdown(html_temp,unsafe_allow_html = True)
-    
+    st.write("The following application utlizes Glassdoor.com and the large amount of data that resides on their platform. This application harnesses 1,000 job postings for each of the Top 50 Careers of 2021, according to U.S. News.  In total, nearly 50,000 data records were used to optmized a Random Forest Regerssion Model that utlized GridSearchCV to Hypertune a variety of parameters. I hope you enjoy the application and make some interesting insights!  ")
+    st.write("")
     #Create user input field to enter the data required
     simplified_job_title = st.selectbox("What is the Official Job Title?",('Anesthesiologist'
                                                                             ,'Behavioral Disorder Counselor'
@@ -381,6 +382,12 @@ def main():
         st.success("Based off of the Random Forest Regression Model with Mean Absolute Error of ~ $16,400, and whose parameters were hypertuned using GridSearch CV, your estimated salary should be {}".format(result))
         link = "#### For more information on this career, check out Glassdoor's Information [Page](https://www.glassdoor.com/Search/results.htm?keyword={})".format(simplified_job_title.replace(' ',''))
         st.markdown(link,unsafe_allow_html=True)
+    
+    st.write("Please feel free to reach out to me regarding any questions, comments, or concerns!")
+    st.write("Yianni John Mercer")
+    st.write("DePaul University")
+    st.write("Master's of Applied Statistics & Data Science")
+    st.write("jmercer4@depaul.edu")
  
 if __name__=='__main__': 
     main()    
