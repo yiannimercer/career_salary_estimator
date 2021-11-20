@@ -19,10 +19,10 @@ You can of course interact with the Web Application yourself [here](https://shar
 * [Initial Project Inspiration](https://www.youtube.com/watch?v=MpF9HENQjDo&list=RDCMUCiT9RITQ9PW6BhXK0y2jaeg&index=3) (Scarping Data Scientist Job Postings)
 * [Deploying a Model Using Pickle and Streamlit](https://www.analyticsvidhya.com/blog/2020/12/deploying-machine-learning-models-using-streamlit-an-introductory-guide-to-model-deployment/)
 
-## Data Collection
+## Data Collection & Feature Engineering
 After updating the web scraper that was previously developed to the most recent (Nov, 2021) HTML Code that Glassdoor is using, the following variables were collected for each job posting:
 
-* **Job Title** - Title of the Job Posting on Glassdoor (E.g., Data Scientist, Dental Hygienist)
+* **Job Title** - Title of the Job Posting on Glassdoor (E.g., Senior Data Scientist, Junior Dental Hygienist)
 * **Salary Estimate** - The Glassdoor provided average salary estimate based on previous employees in the same company and/or position who have reported their earnings to the platform.  (E.g., Employer Provided Salary: $80K - $100K)
 * **Job Description** - A brief description of the job, responsibilities, and other need to know's that the company has chosen to share.
 * **Company Rating** - A float data type representing the company's average rating, on a scale from 1.0 to 5.0 (E.g., 3.7)
@@ -36,3 +36,14 @@ After updating the web scraper that was previously developed to the most recent 
 * **Revenue** - The revenue the company earns each fiscal year (E.g., $10+ Billion)
 
 Additionally, various features were engineered or appended to the data frame that we developed.  Below is a list of these features.
+
+* **Simplified Job Title** - The name of the career that was searched in Glassdoor (E.g., Data Scientist, Data Hygienist, IT Manager)
+* **Hourly** - Indicator column to show if the Estimated Pay is an hourly rate (1 = Hourly Pay Rate | 0 = Annually)
+* **Employer Provided** - Indicator column to show if the Estimated Pay was provided by the employer (1 = Employer Provided | 0 = Glassdoor Average Values of similar roles)
+* **Min Salary** - The minimum value of the range that is contained in the *Salary Estimate* variable
+* **Max Salary** - The maximum value of the range that is contained in the *Salary Estimate* variable
+* **Average Salary** - The computed average of the *Min* and *Max Salary* variables (if the salary provided was not a *range*, but a single value, both the *Min* and *Max Salary* features would be equal, so the *Average Salary* would be equal to the original *Salary Estimate*).
+* **Company Text** - The result company name after various string cleaning techniques were made use of (E.g., removing extra characters, or numbers that were incidentily parsed as the *Company Name*)
+* **Job State** - The state the job is being offered in (I.e., the state portion of the *Location* variable)
+* **Age** - The age of the company (I.e., 2021 - Founded)
+* **Seniority** - A string variable that indicates the level of seniority the position being offered is (E.g., *Junior*, *Senior*, *nan*)
