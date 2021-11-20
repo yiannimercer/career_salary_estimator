@@ -17,7 +17,6 @@ df = pd.read_csv("eda_data.csv")
 
 df.columns
 
-df['Size'].value_counts()
 
 df_model = df[['avg_salary','Rating','Size','Type of ownership','Industry','Sector','Revenue','employer_provided','job_state','age',
                'simplified_job_title','seniority']]
@@ -25,6 +24,7 @@ df_model = df[['avg_salary','Rating','Size','Type of ownership','Industry','Sect
 # Get Dummy Data
 df_dum = pd.get_dummies(df_model)
 
+df_model.info()
 # Train-Test Split
 
 from sklearn.model_selection import train_test_split

@@ -298,7 +298,7 @@ def main():
                                      ,'$1 to $5 million (USD)'
                                      ,'$5 to $10 million (USD)'
                                      ,'$10 to $25 million (USD)'
-                                     '$25 to $50 million (USD)'
+                                     ,'$25 to $50 million (USD)'
                                      ,'$50 to $100 million (USD)'
                                      ,'$100 to $500 million (USD)'
                                      ,'$500 million to $1 billion (USD)'
