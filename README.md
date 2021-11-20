@@ -30,7 +30,7 @@ After updating the web scraper that was previously developed to the most recent 
 * **Location** - The location of where the job is being offered (E.g., Sandy, TX)
 * **Size** - The size of the company as a whole. (E.g., 10000+ Employees)
 * **Founded** - The year the company was founded (E.g., 1994)
-* **Type of Ownership* - A string variable indicating if the company is public, private, school/university, government, etc. (E.g., Company - Public)
+* **Type of Ownership** - A string variable indicating if the company is public, private, school/university, government, etc. (E.g., Company - Public)
 * **Industry** - The industry the company is in (E.g., Internet)
 * **Sector** - The sector the company is in (E.g., Information Technology)
 * **Revenue** - The revenue the company earns each fiscal year (E.g., $10+ Billion)
