@@ -56,3 +56,21 @@ The [Exploratory Data Analysis Notebook](https://github.com/yiannimercer/career_
 ![Summary Statistics](https://github.com/yiannimercer/career_salary_estimator/blob/main/Summary_stats.png)
 #### Correlation Plot of Pure Numerical Variables
 ![Corr Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/corr_plot_num_variables.png)
+#### Seniority Bar Plot
+![Seniority Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/seniority.png)
+#### Location Bar Plot (Sorted)
+![Location Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/location_img.png)
+#### Average Salary by Company Rating
+Rating |Average Salary|
+--- | --- |
+1 | 157,226.496 |
+--- | --- |
+2 | 102,184.138 |
+--- | --- |
+3 | 99,387.576 |
+--- | --- |
+4 | 102,718.746 |
+--- | --- |
+5 | 134,175.620 |
+--- | --- |
+-1 Not Found | 118,613.914 |
