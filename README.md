@@ -1,4 +1,4 @@
-parameters# Career Salary Estimator
+# A Machine Learning Approach at Career Salary Estimating
 U.S. News presented a list of the Top 100 Careers in 2021, which featured many new and exciting options like *Data Scientist*, but also old-reliable one's like *Accountant* or *Physician*.  This project aims to find a relationship between the average salary of the Top 50 Careers from the former list and numerous variables that pertain to the job posting.  Assuming these relationship can be identified, we aim to exploit the underlying patterns that drive salary with the hopes of developing a regression model that can accurately predict the average salary of various career paths.  
 
 ## Overview
