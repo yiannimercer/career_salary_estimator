@@ -63,14 +63,9 @@ The [Exploratory Data Analysis Notebook](https://github.com/yiannimercer/career_
 #### Average Salary by Company Rating
 Rating |Average Salary|
 --- | --- |
-1 | 157,226.496 |
---- | --- |
-2 | 102,184.138 |
---- | --- |
-3 | 99,387.576 |
---- | --- |
-4 | 102,718.746 |
---- | --- |
-5 | 134,175.620 |
---- | --- |
+1.0 | 157,226.496 |
+2.0 | 102,184.138 |
+3.0 | 99,387.576 |
+4.0 | 102,718.746 |
+5.0 | 134,175.620 |
 -1 Not Found | 118,613.914 |
