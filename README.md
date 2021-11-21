@@ -150,3 +150,49 @@ Utilizing the Python module, *Pickle* we serialized the final Hyper-Parameter Tu
 
 
 #### Streamlit
+
+Streamlit allows you to build a web application within a Python script, making it a powerful tool in projects like these.  Within the [app.py](https://github.com/yiannimercer/career_salary_estimator/blob/main/app.py) script, you can see just how easy it is to not only deploy your machine learning models, but to also ingest user data to predict on.  The first step to this is to load our saved model that we serialized using *Pickle* in the former step.  This process can be seen below.  
+
+      # Load in the trained model
+      pickle_in = open('regressor.pkl','rb')
+      regressor = pickle.load(pickle_in)
+
+Secondly, the *prediction()* function preprocessed the user inputs, reads in our original data frame, appends the user's data (with an indicator so we can keep track of it), transforms the entire data frame to our dummy modeling data frame, and then filters down to the one row that represents the user's data.  These inputs are then passed to the *regressor* object that we declared as our Random Forest model.  
+
+Within the *appy.py* script, you will also notice the *main()* function.  This is where Streamlit's powerful features can be seen.  This function develops the front-end of our web application, declaring variables that house the user inputs.  Each *st.selectbox()* or other functions are user input fields that require data to be entered.  This data is saved within the object that you specify.  For instance, below you can see the *Size* object is a dropdown menu where the user has the option to select the size of the company.  The first parameter is the text that will be displayed above the user input field, and the second are the options they may choose.  
+
+      Size = st.selectbox("Size of the Company",("-1 - Non Applicable"
+                                  ,'1 to 50 Employees'
+                                  ,'51 to 200 Employees'
+                                  ,'201 to 500 Employees'
+                                  ,'501 to 1000 Employees'
+                                  ,'1001 to 5000 Employees'
+                                  ,'5001 to 10000 Employees'
+                                  ,'10000+ Employees'
+                                  , 'Unknown'))  
+
+Finally, harnessing Streamlit's functionality we insert an *Estimate Salary* button, that when clicked, runs the former *prediction()* function we created, with the parameters as the user's inputs.  The prediction is saved to an object and is outputted and formatted for an aesthetically pleasing result.  This code can be seen below.
+
+        if st.button("Estimate Salary"):
+            result = prediction(Rating,Size,Type_of_ownership,Industry,Sector,Revenue,employer_provided,job_state,age,simplified_job_title,seniority)
+            st.warning("The below estimation is simply a prediction using various Machine Learning Techniques such as Random Forest Regression and GridSearchCV in the Sklearn Library.  Please take this into account when comparing predictions against your true values")
+            result = float(result[0])
+            result = str("${:.3f}".format(result))
+            result = result.replace('.',',')
+            st.success("Based off of the Random Forest Regression Model with Mean Absolute Error of ~ $16,400, and whose parameters were hypertuned using GridSearch CV, your estimated salary should be {}".format(result))
+            link = "#### For more information on this career, check out Glassdoor's Information [Page](https://www.glassdoor.com/Search/results.htm?keyword={})".format(simplified_job_title.replace(" ","%20"))
+            st.markdown(link,unsafe_allow_html=True)
+
+**If you wish to run the web application remotely, please navigate to the directory in which this repository is housed on your local machine within the Terminal.  Once your are in the directory, simply type: "streamlit run app.py"  The web application will then open in a local host on your machine, where you can interact with the app there.**  
+
+        (base) yiannimercer@MacBook-Pro ~ % cd /Users/yiannimercer/Library/Mobile\ Documents/iCloud\~com\~getrocketbook\~Rocketbook/Documents/        DSC478_Programming_ML_Apps/Final_Project/career_salary_estimator
+        (base) yiannimercer@MacBook-Pro career_salary_estimator % streamlit run app.py
+
+The output within the terminal will look like the following:
+
+![Terminal SS](https://github.com/yiannimercer/career_salary_estimator/blob/main/terminal_ss.png)
+
+*If your browswer automatially doesn't open up the *Local URL*, you can copy and paste the *Local URL* into your browser yourself!*
+
+
+**You can also view the application without running it locally, as it is hosted on Streamlit.io via their seamless integration with Github Repo's. **
