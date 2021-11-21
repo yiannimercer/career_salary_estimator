@@ -133,7 +133,7 @@ Random Forest, before any tuning of the hyper-parameters, still outperformed bot
 
 However, we wished to optimize the Random Forest Regressor Model even further by performing Sklearn's model selection class, GridSearchCV.  The following instances of the Random Forest's parameters were declared in the dictionary below:
 
-*parameters = {'n_estimators':range(10,300,60), 'criterion':['mse'], 'max_features':('auto','sqrt')}*
+        parameters = {'n_estimators':range(10,300,60), 'criterion':['mse'], 'max_features':('auto','sqrt')}
 
 The parameter dictionary was then passed to the GridSearchCV function, indicating a 3-Fold Cross Validation also be performed for each combination of parameter values.  After generating predictions on our test set, **the calculated mean absolute error of 16.42386175902106** easily indicated our arrival at our best performing model.  
 
