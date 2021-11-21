@@ -28,7 +28,7 @@ for filename in all_files:
     dfs.append(df)
 
 
-df = pd.concat(dfs, axis=0, ignore_index=True)
+df_orig = pd.concat(dfs, axis=0, ignore_index=True)
 df['simplified_job_title'].value_counts()
 # Basic Understanding of Data
 df.shape
