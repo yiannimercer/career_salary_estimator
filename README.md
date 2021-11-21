@@ -54,3 +54,5 @@ The [Exploratory Data Analysis Notebook](https://github.com/yiannimercer/career_
 
 #### Summary Statistics
 ![Summary Statistics](https://github.com/yiannimercer/career_salary_estimator/blob/main/Summary_stats.png)
+#### Correlation Plot of Pure Numerical Variables
+![Corr Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/corr_plot_num_variables.png)
