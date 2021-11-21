@@ -69,3 +69,25 @@ Rating |Average Salary|
 4.0 | 102,718.746 |
 5.0 | 134,175.620 |
 -1 Not Found | 118,613.914 |
+#### Average Salary by Hourly vs. Annual
+Rating |Average Salary|
+--- | --- |
+1 (Hourly) | 127,210.297 |
+0 (Annual) | 54,091.067 |
+#### Average Salary by Company Rating
+Type of Ownership of the Company |Average Salary|
+--- | --- |
+Private Practice / Firm         |148.811052|
+Company - Private               |114.325092|
+Contract                        |107.555172|
+Company - Public                |107.351118|
+College / University            |105.716396|
+Government                      |105.674370|
+Subsidiary or Business Segment  |102.095779|
+Hospital                        | 99.907876|
+School / School District        | 87.400000|
+Nonprofit Organization          | 82.521432|
+Self-employed                   | 77.071942|
+Franchise                       | 54.804124|
+Unknown                         |125.805687|
+-1 (Not Found)                  |116.426477|
