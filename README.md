@@ -72,8 +72,8 @@ Rating |Average Salary|
 #### Average Salary by Hourly vs. Annual
 Rating |Average Salary|
 --- | --- |
-1 (Hourly) | 127,210.297 |
-0 (Annual) | 54,091.067 |
+1 (Hourly) | 54,091.067 |
+0 (Annual) | 127,210.297 |
 #### Average Salary by the Type of Ownership of the Company
 Type of Ownership of the Company |Average Salary|
 --- | --- |
