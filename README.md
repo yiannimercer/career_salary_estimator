@@ -42,7 +42,7 @@ Additionally, various features were engineered or appended to the data frame tha
 * **Employer Provided** - Indicator column to show if the Estimated Pay was provided by the employer (1 = Employer Provided | 0 = Glassdoor Average Values of similar roles)
 * **Min Salary** - The minimum value of the range that is contained in the *Salary Estimate* variable
 * **Max Salary** - The maximum value of the range that is contained in the *Salary Estimate* variable
-* **Average Salary** - The computed average of the *Min* and *Max Salary* variables (if the salary provided was not a *range*, but a single value, both the *Min* and *Max Salary* features would be equal, so the *Average Salary* would be equal to the original *Salary Estimate*).  **If the hourly indicator was *True*, the *Min* and *Max Salary* variables were converted to annual rates by multiplying the hourly pay by 2000.**
+* **Average Salary** - The computed average of the *Min* and *Max Salary* variables (if the salary provided was not a *range*, but a single value, both the *Min* and *Max Salary* features would be equal, so the *Average Salary* would be equal to the original *Salary Estimate*).  **If the hourly indicator was *True*, then the *Min* and *Max Salary* variables were converted to annual rates by multiplying the hourly pay by 2000.**
 * **Company Text** - The result company name after various string cleaning techniques were made use of (E.g., removing extra characters, or numbers that were incidentily parsed as the *Company Name*)
 * **Job State** - The state the job is being offered in (I.e., the state portion of the *Location* variable)
 * **Age** - The age of the company (I.e., 2021 - Founded)
