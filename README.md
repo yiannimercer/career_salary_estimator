@@ -51,3 +51,6 @@ Additionally, various features were engineered or appended to the data frame tha
 ## Exploratory Data Analysis (With Minor Data Touch Up)
 
 The [Exploratory Data Analysis Notebook](https://github.com/yiannimercer/career_salary_estimator/blob/main/exploratory_data_analysis.ipynb) features various data analysis methods used to understand our data.  Prior to the analysis however, some previously lapsed data errors or missed items were addressed.  For example, the *job_state* variable did not have the correct format, or cities in place of the state.  Additionally, we removed rows where numeric columns are null or were not valid at this point.  We also converted our respective features to their appropriate data types (i.e., int, object, etc.). Various bar, box, distribution, and correlation plots, along with group by aggregated tables were utilized to gain insights into our dataset.  Below are some highlights of the analysis.
+
+#### Summary Statistics
+[Summary Statistics](https://github.com/yiannimercer/career_salary_estimator/blob/main/Summary_stats.png)
