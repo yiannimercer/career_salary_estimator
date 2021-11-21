@@ -195,4 +195,4 @@ The output within the terminal will look like the following:
 *If your browswer automatially doesn't open up the *Local URL*, you can copy and paste the *Local URL* into your browser yourself!*
 
 
-**You can also view the application without running it locally, as it is hosted on Streamlit.io via their seamless integration with Github Repo's. **
+**You can also view the application without running it locally, as it is hosted on Streamlit.io via their seamless integration with Github Repo's.**
