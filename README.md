@@ -99,11 +99,11 @@ Knowing the problem called for a regression model, we opted for the following ch
 2. LASSO Regression
 3. Random Forest regression
 
-Linear Regression was chosen as a baseline, knowing we would not receive the most promising results, however to get an idea of the model building process and to kickstart our efforts we chose to utilize this algorithm.  We performed 3-fold cross validation, scoring the model based on the negative mean absolute error, and calculated the mean of these models.
+Linear Regression was chosen as a baseline, knowing we would not receive the most promising results, however to get an idea of the model building process and to kickstart our efforts we chose to utilize this algorithm.  We performed 5-fold cross validation, scoring the model based on the negative mean absolute error, and calculated the mean of these models.
 
-Furthermore, we transitioned into fitting a LASSO regression model, which can be thought of a modified version of linear regression.  In LASSO, the loss function is modified to minimize the complexity of the model by limiting the sum of the absolute values of the model coefficients. [[1]](https://www.pluralsight.com/guides/linear-lasso-ridge-regression-scikit-learn)  We additionally chose to fit the LASSO model due to the sparse data from the many categorical variables, therefore a normalized regression like LASSO may be effective.  As an effort to substantiate our model through many iterations, we chose to fit and use a 3-fold cross validation, over 100 different values for alpha (*range(1,100) / 100*) ,  
+Furthermore, we transitioned into fitting a LASSO regression model, which can be thought of a modified version of linear regression.  In LASSO, the loss function is modified to minimize the complexity of the model by limiting the sum of the absolute values of the model coefficients. [[1]](https://www.pluralsight.com/guides/linear-lasso-ridge-regression-scikit-learn)  We additionally chose to fit the LASSO model due to the sparse data from the many categorical variables, therefore a normalized regression like LASSO may be effective.  As an effort to substantiate our model through many iterations, we chose to fit and use a 5-fold cross validation, over 100 different values for alpha (*range(1,100) / 100*)  
 
-Finally, a Random Forest Regression model was fit, again choosing this model due to many categorical variables, but also with the intention of further iterating through parameters the Random Forest Regressor allows, via [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).  Initially, we fit the model using 3-fold cross validation, and scoring each iteration by its negative mean absolute error.  This model alone returned the most favorable results compared to the former two models, however as we mentioned, tuning of the hyper-parameters to optimize and arrive at the best model via GridSearch CV was performed.
+Finally, a Random Forest Regression model was fit, again choosing this model due to many categorical variables, but also with the intention of further iterating through parameters the Random Forest Regressor allows, via [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).  Initially, we fit the model using 5-fold cross validation, and scoring each iteration by its negative mean absolute error.  This model alone returned the most favorable results compared to the former two models, however as we mentioned, tuning of the hyper-parameters to optimize and arrive at the best model via GridSearch CV was performed.
 
 ## Findings & Model Performance
 
@@ -113,7 +113,7 @@ Linear Regression by far performed the worst compared to any version of any mode
 
 Data Set | Mean Absolute Error |
 --- | --- |
-3-Fold Cross Validation on Training Set     |5204564.249911354|
+5-Fold Cross Validation on Training Set     |2311113.8638958544|
 Test Set                  |43907.414817765246|
 
 #### LASSO Regression
@@ -124,12 +124,12 @@ LASSO Regression was much more promising than the previous Linear Regression Mod
 
 Data Set | Mean Absolute Error |
 --- | --- |
-3-Fold Cross Validation on Training Set (Alpha = 0.01)     |19.236062|
+5-Fold Cross Validation on Training Set (Alpha = 0.01)     |19.236062|
 Test Set                  |18.334629248453158|
 
 #### Random Forest Regression
 
-Random Forest, before any tuning of the hyper-parameters, still outperformed both of our previous models.  Like the formers, we also applied 3-Fold Cross Validation, scoring based off the negative mean absolute value.  Calculating the mean of these models, **we arrived at mean absolute value of 17.258649699296782.**  
+Random Forest, before any tuning of the hyper-parameters, still outperformed both of our previous models.  Like the formers, we also applied 5-Fold Cross Validation, scoring based off the negative mean absolute value.  Calculating the mean of these models, **we arrived at mean absolute value of 17.258649699296782.**  
 
 However, we wished to optimize the Random Forest Regressor Model even further by performing Sklearn's model selection class, GridSearchCV.  The following instances of the Random Forest's parameters were declared in the dictionary below:
 
@@ -192,7 +192,7 @@ The output within the terminal will look like the following:
 
 ![Terminal SS](https://github.com/yiannimercer/career_salary_estimator/blob/main/terminal_ss.png)
 
-*If your browswer automatially doesn't open up the *Local URL*, you can copy and paste the *Local URL* into your browser yourself!*
+*If your browser automatically doesn't open up the *Local URL*, you can copy and paste the *Local URL* into your browser yourself!*
 
 
 **You can also view the application without running it locally, as it is hosted on Streamlit.io via their seamless integration with Github Repo's.**
