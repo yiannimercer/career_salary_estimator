@@ -4,3 +4,5 @@ numpy
 streamlit
 matplotlib
 seaborn
+glob
+os

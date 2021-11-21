@@ -19,7 +19,7 @@ You can of course interact with the Web Application yourself [here](https://shar
 * [Initial Project Inspiration](https://www.youtube.com/watch?v=MpF9HENQjDo&list=RDCMUCiT9RITQ9PW6BhXK0y2jaeg&index=3) (Scarping Data Scientist Job Postings)
 * [Deploying a Model Using Pickle and Streamlit](https://www.analyticsvidhya.com/blog/2020/12/deploying-machine-learning-models-using-streamlit-an-introductory-guide-to-model-deployment/)
 
-## Data Collection & Feature Engineering
+## Data Collection, Cleaning & Feature Engineering
 After updating the web scraper that was previously developed to the most recent (Nov, 2021) HTML Code that Glassdoor is using, the following variables were collected for each job posting:
 
 * **Job Title** - Title of the Job Posting on Glassdoor (E.g., Senior Data Scientist, Junior Dental Hygienist)
@@ -35,15 +35,19 @@ After updating the web scraper that was previously developed to the most recent 
 * **Sector** - The sector the company is in (E.g., Information Technology)
 * **Revenue** - The revenue the company earns each fiscal year (E.g., $10+ Billion)
 
-Additionally, various features were engineered or appended to the data frame that we developed.  Below is a list of these features.
+Additionally, various features were engineered or appended to the data frame that was developed.  Below is a list of these features.  
 
 * **Simplified Job Title** - The name of the career that was searched in Glassdoor (E.g., Data Scientist, Data Hygienist, IT Manager)
 * **Hourly** - Indicator column to show if the Estimated Pay is an hourly rate (1 = Hourly Pay Rate | 0 = Annually)
 * **Employer Provided** - Indicator column to show if the Estimated Pay was provided by the employer (1 = Employer Provided | 0 = Glassdoor Average Values of similar roles)
 * **Min Salary** - The minimum value of the range that is contained in the *Salary Estimate* variable
 * **Max Salary** - The maximum value of the range that is contained in the *Salary Estimate* variable
-* **Average Salary** - The computed average of the *Min* and *Max Salary* variables (if the salary provided was not a *range*, but a single value, both the *Min* and *Max Salary* features would be equal, so the *Average Salary* would be equal to the original *Salary Estimate*).
+* **Average Salary** - The computed average of the *Min* and *Max Salary* variables (if the salary provided was not a *range*, but a single value, both the *Min* and *Max Salary* features would be equal, so the *Average Salary* would be equal to the original *Salary Estimate*).  **If the hourly indicator was *True*, the *Min* and *Max Salary* variables were converted to annual rates by multiplying the hourly pay by 2000.**
 * **Company Text** - The result company name after various string cleaning techniques were made use of (E.g., removing extra characters, or numbers that were incidentily parsed as the *Company Name*)
 * **Job State** - The state the job is being offered in (I.e., the state portion of the *Location* variable)
 * **Age** - The age of the company (I.e., 2021 - Founded)
 * **Seniority** - A string variable that indicates the level of seniority the position being offered is (E.g., *Junior*, *Senior*, *nan*)
+
+## Exploratory Data Analysis (With Minor Data Touch Up)
+
+The [Exploratory Data Analysis Notebook](https://github.com/yiannimercer/career_salary_estimator/blob/main/exploratory_data_analysis.ipynb) features various data analysis methods used to understand our data.  Prior to the analysis however, some previously lapsed data errors or missed items were addressed.  For example, the *job_state* variable did not have the correct format, or cities in place of the state.  Additionally, we removed rows where numeric columns are null or were not valid at this point.  We also converted our respective features to their appropriate data types (i.e., int, object, etc.). Various bar, box, distribution, and correlation plots, along with group by aggregated tables were utilized to gain insights into our dataset.  Below are some highlights of the analysis.
