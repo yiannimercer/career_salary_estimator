@@ -57,7 +57,7 @@ The [Exploratory Data Analysis Notebook](https://github.com/yiannimercer/career_
 #### Correlation Plot of Pure Numerical Variables
 ![Corr Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/corr_plot_num_variables.png)
 #### Seniority Bar Plot
-![Seniority Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/seniority.png)
+![Seniority Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/seniority_img.png)
 #### Location Bar Plot (Sorted)
 ![Location Plot](https://github.com/yiannimercer/career_salary_estimator/blob/main/location_img.png)
 #### Average Salary by Company Rating
